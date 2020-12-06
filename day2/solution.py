@@ -21,9 +21,12 @@ def main() -> None:
 
 
 def count_valid_passwords(password_database: List[str], policy: str) -> int:
-    return len(
-        list(filter(lambda p: is_valid_password(p, policy=policy), password_database))
-    )
+    count = 0
+    for password in password_database:
+        if is_valid_password(password, policy=policy):
+            count += 1
+
+    return count
 
 
 def is_valid_password(parameters_and_password: str, policy: str) -> bool:
