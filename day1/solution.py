@@ -9,9 +9,11 @@ def main() -> None:
 
     with open(input_path) as infile:
         entries = list(map(int, infile.readlines()))
+
         # Your puzzle answer was 1016131.
         print("Part 1 answer:", multipy_two_entries_that_sum_to_n(entries, 2020))
-        # Your puzzle answer was 1016131.
+
+        # Your puzzle answer was 276432018.
         print("Part 2 answer:", multipy_three_entries_that_sum_to_n(entries, 2020))
 
 

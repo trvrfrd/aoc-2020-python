@@ -10,8 +10,10 @@ def main() -> None:
     input_path = path.join(path.dirname(__file__), "input.txt")
     with open(input_path) as input_file:
         file_data = input_file.read().strip()
+
         # Your puzzle answer was 213.
         print("Part 1 answer:", count_valid_passports(file_data))
+
         # Your puzzle answer was 147.
         print("Part 2 answer:", count_valid_passports(file_data, strict=True))
 
